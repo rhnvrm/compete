@@ -1,8 +1,8 @@
-1 1 1900
-1 Hundreds
-10 2 1900
-41 Hundreds
-16 12 2000
-51 Tens
-26 12 2010
-1 Ones
+300 Hundreds
+1 Tens
+270 Hundreds
+271 Hundreds
+266 Hundreds
+267 Hundreds
+209 Hundreds
+210 Hundreds
