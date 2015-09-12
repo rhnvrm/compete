@@ -64,8 +64,14 @@ int main(){
 		}
 		sum += dd;
 
+		if(month == 9 ){
+			cout << sum + 1 << " Hundreds" << endl;
+		}
+		else if(month == 11){
+			cout << sum + 1 << " Tens" << endl;
+		}
 		//sum => days 
-		if(month == 0){
+		else if(month == 0){
 			cout << dd << " Hundreds" << endl;
 		}
 		else if(sum <= 300){

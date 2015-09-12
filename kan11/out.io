@@ -1,8 +1,8 @@
 300 Hundreds
 1 Tens
-270 Hundreds
 271 Hundreds
-266 Hundreds
+272 Hundreds
 267 Hundreds
-209 Hundreds
-210 Hundreds
+268 Hundreds
+332 Tens
+333 Tens
