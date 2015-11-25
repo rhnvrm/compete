@@ -11,13 +11,13 @@ int main(){
 
 	for(int i = 0; i < n; i++){
 		cin >> t;
-		X += pow(x,n-i-1)*t;
+		X += ceil(pow(x,n-i-1))*t;
 	}
 
 	cin >> m >> y;
 	for(int i = 0; i < m; i++){
 		cin >> t;
-		Y += pow(y,m-i-1)*t;
+		Y += ceil(pow(y,m-i-1))*t;
 	}
 
 	//cout << X << " " << Y << endl;
