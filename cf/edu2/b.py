@@ -7,34 +7,38 @@ a.sort()
 #print a
 
 def binary_search(a, x, lo=0, hi=None):
-    
+	found = -1
 
-    if hi is None:
-        hi = len(a)
-    while lo < hi:
+	if hi is None:
+		hi = len(a) - 1
+	while lo <= hi:
 
-        mid = (lo+hi)//2
-        #print lo, mid, hi
-        midval = a[mid]
-        if midval < x:
-            lo = mid+1
-        elif midval > x: 
-            hi = mid
-        else:
-            return mid + len([x for x in a if x == a[mid]]) - 1
+		mid = (lo+hi)>>1
+		midval = a[mid]
+
+		if midval < x:
+			lo = mid + 1
+		elif midval > x: 
+			hi = mid - 1
+		else:
+			found = mid
+			lo = mid + 1
 
 
-    return hi
+	return found
 
 #print a
 
-for i in b:
-	#print i 
 
-	count = binary_search(a,i) 
+
+for i in b:
+	j=i
+	count = -1
+	while(count == -1):
+		count = binary_search(a,j)
+		if j < 0j-=1
 	
-	
-	
-	print count,
+	#while()
+	print count+1,
 	#print ''
 print ""
