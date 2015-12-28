@@ -4,7 +4,7 @@ using namespace std;
 
 long long product = 1;
 
-
+/*
 long long GCD(int x, int y){
 	while(x * y != 0){
 		if(x >= y){
@@ -17,17 +17,19 @@ long long GCD(int x, int y){
 
 	return x + y;
 }
+*/
 
-long long vgcd(std::vector<long long> v){
+long long vgcd(const long long arr[], n){
 	long long gcd = 1;
 
-	for (long long i = 0; i < v.size(); i++)
+	for (long long i = 0; i < n; i++)
 	{
-		gcd = GCD(gcd, v[i]);
+		gcd = __gcd(gcd, v[i]);
 	}
 
 }
 
+/*
 long long find_subsets(vector<long long> so_far, vector<long long> rest){
 
 	if (rest.empty() == 1){
@@ -43,8 +45,10 @@ long long find_subsets(vector<long long> so_far, vector<long long> rest){
 		find_subsets(so_far, std::vector<long long>(rest.begin() + 1, rest.end()) );
 	}
 
-}
+}*/
 
+
+long long p[100005];
 
 int main(){
 
@@ -52,22 +56,28 @@ int main(){
 
 	cin >> t;
 
+
 	while(t--){
 		product = 1;
-		long long n, temp;
+		long long N, temp;
 
-		cin >> n;
+		cin >> N;
 
-		std::vector<long long> v;
-
-		for(int i = 0; i < n; i++){
-			cin >> temp;
-			v.push_back(temp);
+		for(int i = 0; i < N; i++){
+			cin >> p[i];
 		}
 
-		std::vector<long long> empty;
 
-		find_subsets(empty, v);
+		for (int i = 0; i < (1 << N); i++) {
+			for (int j = 0; j < N; j++){
+				if (i & (1 << j))
+				// if bit j is on
+				printf("%lld ", p[j]);
+				// this is part of set
+			}
+			printf("\n");
+		}
+
 
 		cout << product % 1000000007 << endl;
 	}
