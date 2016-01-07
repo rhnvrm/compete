@@ -1,5 +1,5 @@
 /*
-	program: 
+	program: next_number codeburst 4.0 hackerearth
 	author : rhnvrm
 */
 
@@ -35,16 +35,19 @@ const   int            md  = 0;
 const   double         pi  = 2*acos(0);
 
 
-int main() {
-
+int main()
+{
 	fast;
 
 	ll t;
-
 	TC(t)
 	{
-		cout << t << '\n';
+		int n;
+		cin>>n;
+		while((n&(n>>1)))
+		{
+			n++;
+		}
+		cout<<n<<"\n";
 	}
- 
-	return 0;
 }

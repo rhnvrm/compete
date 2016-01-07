@@ -1,5 +1,5 @@
 /*
-	program: 
+	program: fifa 2nd attempt codeburst 4.0 hackerearth
 	author : rhnvrm
 */
 
@@ -39,11 +39,24 @@ int main() {
 
 	fast;
 
-	ll t;
-
-	TC(t)
+	int n;
+	cin>>n;
+	int hk[n+1],ak[n+1];
+	int color[100001]={0};
+	for(int i=1;i<=n;i++)
 	{
-		cout << t << '\n';
+		cin>>hk[i]>>ak[i];
+		color[hk[i]]++;
+	}
+	int h,a,temp;
+	for(int i=1;i<=n;i++)
+	{
+		h=n-1;
+		a=n-1;
+		temp=color[ak[i]];
+		h+=temp;
+		a-=temp;
+		cout<< h << ' ' << a <<'\n';
 	}
  
 	return 0;

@@ -1,5 +1,5 @@
 /*
-	program: 
+	program: fifa codeburst 4.0 hackerearth
 	author : rhnvrm
 */
 
@@ -34,17 +34,41 @@ const   int            ms  = 0;
 const   int            md  = 0;
 const   double         pi  = 2*acos(0);
 
-
-int main() {
-
+int main()
+{
 	fast;
 
-	ll t;
-
-	TC(t)
+	ll n,i,j,k,N;
+	vector<pair<ll,ll> > v;
+	pair<ll,ll> w1,w2;
+	ll A[100001]={0},B[100001]={0};
+	cin>>N;
+	n=N;
+	k=0;
+	while(n--)
 	{
-		cout << t << '\n';
+		cin >> i >> j;
+		v.push_back(make_pair(i,j));
+		A[k++]=N-1;
 	}
- 
-	return 0;
+	for(i=0;i<v.size()-1;i++)
+	{
+		w1=v[i];
+		for(j=i+1;j<v.size();j++)
+		{
+			w2=v[j];
+			if(w1.first==w2.second)
+				A[j]++;
+			else
+				B[j]++;
+			if(w1.second==w2.first)
+				A[i]++;
+			else
+				B[i]++;
+		}
+	}
+	for(i=0;i<N;i++)
+	{
+		cout << A[i] << ' ' << B[i] << '\n';
+	}
 }

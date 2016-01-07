@@ -1,5 +1,5 @@
 /*
-	program: 
+	program: staircase codeburst 4.0 hackerearth
 	author : rhnvrm
 */
 
@@ -33,18 +33,18 @@ const   double         eps = 0;
 const   int            ms  = 0;
 const   int            md  = 0;
 const   double         pi  = 2*acos(0);
-
-
-int main() {
-
+ 
+int main(){
 	fast;
 
-	ll t;
+	ll t, n;
 
 	TC(t)
 	{
-		cout << t << '\n';
-	}
- 
-	return 0;
+    	cin >> n;
+    	int m = 0,i = 0;
+    	for(i=1; m<n; i++)
+    		m+=i+1;
+    	cout << i-1 << endl;
+    }
 }
