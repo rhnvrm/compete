@@ -34,6 +34,8 @@ const   int            ms  = 0;
 const   int            md  = 0;
 const   double         pi  = 2*acos(0);
 
+template<class T> T power(T N,T P){ return (P==0)?  1: N*power(N,P-1); }
+
 
 int main() {
 
