@@ -3,7 +3,7 @@
 	author : rhnvrm
 */
 
-//!! TODO Debug ON/OFF | VLL
+
 
 #include <bits/stdc++.h>
 
@@ -23,11 +23,14 @@ using namespace std;
 #define forei(itr, x)  for (__typeof(x.end()) itr = x.end() - 1; itr != x.begin() - 1; itr --)
 #define fast ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0)
 typedef long long      ll;
+typedef unsigned long long      ull;
 typedef pair<int, int> ii;
 typedef pair<ii, int>  iii;
 typedef vector<int>    vi;
 typedef vector<ii>     vii;
 typedef vector<iii>    viii;
+typedef vector<ll>	   vll;
+
 const   int            inf = 0;
 const   double         eps = 0;
 const   int            ms  = 0;
@@ -41,11 +44,50 @@ int main() {
 
 	fast;
 
-	ll t;
+	ull t,n,temp;
 
 	TC(t)
 	{
-		cout << t << '\n';
+		cin >> n;
+
+		map<ull,ull> m;
+
+		for(int i =0; i < n; i++){
+			cin >> temp;
+			m[temp]++;
+		}
+
+		//ll val = 0,count = 0;
+		
+		vector<ull> v;
+
+		for(auto i : m){
+			v.pb(i.second);
+		}
+
+		sort(all(v));
+		//reverse(all(v));
+
+		ll sum = 0;
+		ull count = 0;
+
+		for(auto i : v){
+			if(sum <= 0){
+				sum += i;
+			}
+			else{
+				sum -= i;
+				count+=i;
+			}
+		}
+
+		count+=abs(sum);
+
+		cout << count << '\n';
+		
+
+		
+
 	}
  
 	return 0;

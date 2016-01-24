@@ -3,7 +3,7 @@
 	author : rhnvrm
 */
 
-//!! TODO Debug ON/OFF | VLL
+
 
 #include <bits/stdc++.h>
 
@@ -41,11 +41,16 @@ int main() {
 
 	fast;
 
-	ll t;
+	ll t,n,m,k;
 
 	TC(t)
 	{
-		cout << t << '\n';
+		cin >> n >> m >> k;
+		ll diff = abs(n-m) - k;
+		if(diff < 0)
+			cout << 0 << '\n';
+		else
+			cout << diff << '\n';
 	}
  
 	return 0;
