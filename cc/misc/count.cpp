@@ -50,6 +50,11 @@ int main()
 	{
 		cin >> n >> q;
 		cin >> s;
+		map<char, int> count;
+		for(int i = 0; i < n; i++)
+		{
+			count[s[i]]++;
+		}
 
 		for(int i = 0; i < q; i++)
 		{
@@ -59,13 +64,8 @@ int main()
 				type = 0;
 			else 
 				type = 1;
-
-			ll count = 0;
-			for(int i = 0; i < n; i++)
-			{
-				if(s[i] == c) count++;
-			}
-			if(count % 2 == type)
+	
+			if(count[c] % 2 == type)
 				cout << "yes\n";
 			else
 				cout << "no\n";
